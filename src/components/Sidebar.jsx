@@ -3,17 +3,14 @@ import { useState } from 'react'
 
 const Sidebar = ({ menuItems }) => {
   const [expandedItems, setExpandedItems] = useState({})
-
-
+  
   const toggleExpand = (id) => {
     setExpandedItems((prev) => ({
       ...prev,
       [id]: !prev[id],
     }))
   }
-
   
-
   const renderMenu = (items, level = 0, parentKey = '') => {
     return (
       <ul
